@@ -170,14 +170,26 @@ class OnboardContent extends StatelessWidget {
           width: MediaQuery.of(context).size.width * 0.8 * scalew,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(bradius),
-            child: imagepath.toLowerCase().endsWith('.svg')?SvgPicture.asset(
-              imagepath,
-              fit: BoxFit.cover,
-            ):Image.asset(
+            child: imagepath.toLowerCase().endsWith('.svg')
+                ? (isNetworkUrl(imagepath)
+                ? SvgPicture.network(
               imagepath,
               fit: BoxFit.cover,
             )
-          ),
+                : SvgPicture.asset(
+              imagepath,
+              fit: BoxFit.cover,
+            ))
+                : (isNetworkUrl(imagepath)
+                ? Image.network(
+              imagepath,
+              fit: BoxFit.cover,
+            )
+                : Image.asset(
+              imagepath,
+              fit: BoxFit.cover,
+            )),
+          )
         ),
         Spacer(
           flex: 6,

@@ -46,14 +46,15 @@ class _SplashScreenState extends State<SplashScreen> {
           children: <Widget>[
             widget.options['bgimage']['active']
                 ? Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image:
-                            NetworkImage(widget.options['bgimage']['imageurl']),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  )
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: isNetworkUrl(widget.options['bgimage']['imageurl'])
+                      ? NetworkImage(widget.options['bgimage']['imageurl'])
+                      : AssetImage(widget.options['bgimage']['imageurl']) as ImageProvider,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            )
                 : Container(),
             Center(
               child: AppIcon(

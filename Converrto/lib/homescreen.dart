@@ -135,24 +135,50 @@ class _HomeScreenState extends State<HomeScreen> {
               items: List.generate(
                 widget.navdata['options']['menu_options_count'],
                 (index) => BottomNavigationBarItem(
-                  icon: SvgPicture.asset(
-                    widget.navdata['options']['menu_options'][index]['icon'],
-                    colorFilter: ColorFilter.mode(
-                        hexToColor(
-                            widget.navdata['options']['unselected_item_color']),
-                        BlendMode.srcIn),
-                    height: 30,
-                    width: 30,
-                  ),
-                  activeIcon: SvgPicture.asset(
-                    widget.navdata['options']['menu_options'][index]['icon'],
-                    colorFilter: ColorFilter.mode(
-                        hexToColor(
-                            widget.navdata['options']['selected_item_color']),
-                        BlendMode.srcIn),
-                    height: 30,
-                    width: 30,
-                  ),
+                  icon: isNetworkUrl(widget.navdata['options']['menu_options']
+                          [index]['icon'])
+                      ? SvgPicture.network(
+                          widget.navdata['options']['menu_options'][index]
+                              ['icon'],
+                          colorFilter: ColorFilter.mode(
+                              hexToColor(widget.navdata['options']
+                                  ['unselected_item_color']),
+                              BlendMode.srcIn),
+                          height: 30,
+                          width: 30,
+                        )
+                      : SvgPicture.asset(
+                          widget.navdata['options']['menu_options'][index]
+                              ['icon'],
+                          colorFilter: ColorFilter.mode(
+                              hexToColor(widget.navdata['options']
+                                  ['unselected_item_color']),
+                              BlendMode.srcIn),
+                          height: 30,
+                          width: 30,
+                        ),
+                  activeIcon: isNetworkUrl(widget.navdata['options']
+                          ['menu_options'][index]['icon'])
+                      ? SvgPicture.network(
+                          widget.navdata['options']['menu_options'][index]
+                              ['icon'],
+                          colorFilter: ColorFilter.mode(
+                              hexToColor(widget.navdata['options']
+                                  ['selected_item_color']),
+                              BlendMode.srcIn),
+                          height: 30,
+                          width: 30,
+                        )
+                      : SvgPicture.asset(
+                          widget.navdata['options']['menu_options'][index]
+                              ['icon'],
+                          colorFilter: ColorFilter.mode(
+                              hexToColor(widget.navdata['options']
+                                  ['selected_item_color']),
+                              BlendMode.srcIn),
+                          height: 30,
+                          width: 30,
+                        ),
                   label: widget.navdata['options']['menu_options'][index]
                       ['name'],
                 ),
