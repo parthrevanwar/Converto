@@ -73,6 +73,9 @@ class _MyAppState extends State<MyApp> {
                   config['config']['appbar']['options']['app_title_color']),
               fontSize: double.parse(
                   config['config']['appbar']['options']['title_fontsize']),
+              fontFamily: config['config']['appbar']['options']['title_font_family'],
+              fontWeight: getFontWeight(config['config']['appbar']['options']['title_font_weight']),
+
             )),
         textTheme: const TextTheme(
           titleLarge: TextStyle(

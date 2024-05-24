@@ -62,7 +62,9 @@
       "options": {
         "bgcolor": "#8D4BFA",
         "bgicon": "assets/icon.png",
-        "app_title": "Wemofyy",
+        "app_title": "My App",
+        "title_font_weight": 5,
+        "title_font_family": "poppins",
         "app_title_color": "#000000",
         "centertitle": false,
         "title_fontsize": "25"
@@ -79,12 +81,12 @@
           {
             "name": "Home",
             "url": "https://wemofy.in/",
-            "icon": "assets/home.svg"
+            "icon": "home_fill.svg"
           },
           {
             "name": "Profile",
             "url": "https://wemofy.in/",
-            "icon": "assets/messages.svg"
+            "icon": "messages_fill.svg"
           }
         ]
       }

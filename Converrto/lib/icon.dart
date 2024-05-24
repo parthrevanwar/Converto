@@ -25,7 +25,7 @@ class AppIcon extends StatelessWidget {
                   fit: BoxFit.cover,
                 )
               : SvgPicture.asset(
-                  url,
+                  convertToAssetPath(url),
                   fit: BoxFit.cover,
                 ))
           : ClipRRect(

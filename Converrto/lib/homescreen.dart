@@ -148,8 +148,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 30,
                         )
                       : SvgPicture.asset(
-                          widget.navdata['options']['menu_options'][index]
-                              ['icon'],
+                          convertToAssetPath(widget.navdata['options']
+                              ['menu_options'][index]['icon']),
                           colorFilter: ColorFilter.mode(
                               hexToColor(widget.navdata['options']
                                   ['unselected_item_color']),
