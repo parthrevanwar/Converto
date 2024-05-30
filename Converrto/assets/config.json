@@ -27,12 +27,14 @@
     },
     "onboardingscreen": {
       "active": true,
-      "screen_count": 2,
-      "bgcolor": "#EDE8FA",
-      "button_color":"#00066B",
-      "dot_color": "#00066B",
-      "active_dot_color": "#232996",
-      "squaredot": true,
+      "screen_options": {
+        "screen_count": 2,
+        "bgcolor": "#EDE8FA",
+        "button_color":"#00066B",
+        "dot_color": "#00066B",
+        "active_dot_color": "#232996",
+        "squaredot": true
+      },
       "options": [
         {
           "height_scale_ofimage": 0.8,
