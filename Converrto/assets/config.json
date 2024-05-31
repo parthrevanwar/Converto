@@ -78,8 +78,106 @@
         "bottom_bar_color": "#EDE8FA",
         "selected_item_color": "#000000",
         "unselected_item_color": "#64748B",
-        "menu_options_count": 2,
+        "menu_options_count":3,
         "menu_options": [
+          {
+            "name": "Home",
+            "icon": "home_fill.svg",
+            "homescreen_options": {
+              "carousel": {
+                "active": true,
+                "border_color": "#000000",
+                "dot_color": "#00066B",
+                "active_dot_color": "#232996",
+                "squaredot": false ,
+                "carousel_count": 4 ,
+                "carousel_array": [
+                  {
+                    "title": "hello",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "url": "https://wemofy.in/"
+                  },{
+                    "title": "hello",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "url": "https://wemofy.in/"
+                  },{
+                    "title": "hello",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "url": "https://wemofy.in/"
+                  },{
+                    "title": "hello",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "url": "https://wemofy.in/"
+                  }
+                ]
+              },
+              "tab": {
+                "active": true,
+                "tab_color": "#EDE8FA",
+                "tab_border_color": "#000000",
+                "title_color": "#000000",
+                "tab_count": 5,
+                "tab_array": [
+                  {
+                    "title": "hello",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "url": "https://wemofy.in/"
+                  },
+                  {
+                    "title": "hello",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "url": "https://wemofy.in/"
+                  },
+                  {
+                    "title": "hello",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "url": "https://wemofy.in/"
+                  },
+                  {
+                    "title": "hello",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "url": "https://wemofy.in/"
+                  },
+                  {
+                    "title": "hello",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "url": "https://wemofy.in/"
+                  }
+                ]
+              },
+              "options": {
+                "active": true,
+                "bgcolor": "#EDE8FA",
+                "border_color": "#000000",
+                "title_color": "#000000",
+                "options_count": 5,
+                "options_array": [
+                  {
+                    "title": "hello",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "url": "https://wemofy.in/"
+                  },
+                  {
+                    "title": "hello",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "url": "https://wemofy.in/"
+                  },{
+                    "title": "hello",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "url": "https://wemofy.in/"
+                  },{
+                    "title": "hello",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "url": "https://wemofy.in/"
+                  },{
+                    "title": "hello",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "url": "https://wemofy.in/"
+                  }
+                ]
+              }
+            }
+          },
           {
             "name": "Home",
             "url": "https://wemofy.in/",

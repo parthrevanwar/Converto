@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:converrto/globalfunctions.dart';
+import 'package:converrto/homepage.dart';
 import 'package:converrto/icon.dart';
 import 'package:converrto/bottomnavscreens/nav1.dart';
 import 'package:converrto/hamburgurscreens/hamburger1.dart';
@@ -95,18 +96,25 @@ class _HomeScreenState extends State<HomeScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 controller: _pageController,
                 itemCount:
-                    max(widget.navdata['options']['menu_options_count'], 1),
+                    max(widget.navdata['options']['menu_options_count'] + 1, 1),
                 onPageChanged: (index) {
                   setState(() {
                     _selectedIndex = index;
                   });
                 },
                 itemBuilder: (context, index) {
-                  return Nav1(
-                    url: widget.navdata['options']['menu_options'][index]
-                        ['url'],
-                    jsonData: widget.jsonData,
-                  );
+                  if (index == 0) {
+                    return HomePage(
+                      jsonData: widget.jsonData,
+                      homedata: widget.jsonData['config']['bottom_navigation']['options']['menu_options'][0]['homescreen_options'],
+                    );
+                  } else {
+                    return Nav1(
+                      url: widget.navdata['options']['menu_options'][index]
+                          ['url'],
+                      jsonData: widget.jsonData,
+                    );
+                  }
                 },
               ),
             )
@@ -114,17 +122,25 @@ class _HomeScreenState extends State<HomeScreen> {
               physics: NeverScrollableScrollPhysics(),
               controller: _pageController,
               itemCount:
-                  max(widget.navdata['options']['menu_options_count'], 1),
+                  max(widget.navdata['options']['menu_options_count'] + 1, 1),
               onPageChanged: (index) {
                 setState(() {
                   _selectedIndex = index;
                 });
               },
               itemBuilder: (context, index) {
-                return Nav1(
-                  url: widget.navdata['options']['menu_options'][index]['url'],
-                  jsonData: widget.jsonData,
-                );
+                if (index == 0) {
+                  return HomePage(
+                    jsonData: widget.jsonData,
+                    homedata: widget.jsonData['config']['bottom_navigation']['options']['menu_options'][0]['homescreen_options'],
+                  );
+                } else {
+                  return Nav1(
+                    url: widget.navdata['options']['menu_options'][index]
+                        ['url'],
+                    jsonData: widget.jsonData,
+                  );
+                }
               },
             ),
       bottomNavigationBar: widget.navdata['active']
@@ -235,9 +251,6 @@ class _MenuDrawerState extends State<MenuDrawer> {
                 url: widget.jsonData['config']['sidebar']['app_icon'],
               ),
             ),
-            SizedBox(
-              height: 0,
-            ),
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
               child: Text(
@@ -266,7 +279,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 30,
             ),
             MenuButton(
               press: () {
