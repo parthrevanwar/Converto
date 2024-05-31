@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
     return SingleChildScrollView(
       child: Column(
         children: [
+          SizedBox(height: 15,),
           widget.homedata['carousel']['active']
               ? CarouselSlider(
                   options: CarouselOptions(
@@ -56,10 +57,10 @@ class _HomePageState extends State<HomePage> {
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(20, 20, 20, 5),
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(7),
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(7),
                               border: Border.all(
                                   width: 1,
                                   color: hexToColor(widget.homedata['carousel']
@@ -76,9 +77,13 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ))
               : Container(),
+          SizedBox(height: 5,),
           widget.homedata['carousel']['active']
               ? DotsIndicator(
                   decorator: DotsDecorator(
+                    size: Size.square(12),
+                    activeSize: Size.square(12),
+                    spacing: EdgeInsets.fromLTRB(5, 0, 0, 0),
                     color: hexToColor(widget.homedata['carousel']['dot_color']),
                     activeColor: hexToColor(
                         widget.homedata['carousel']['active_dot_color']),
@@ -86,26 +91,27 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(
                             widget.homedata['carousel']['squaredot']
                                 ? 2.0
-                                : 5.0)),
+                                : 6.0)),
                     activeShape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
                             widget.homedata['carousel']['squaredot']
                                 ? 2.0
-                                : 5.0)),
+                                : 6.0)),
                   ),
                   dotsCount: widget.homedata['carousel']['carousel_count'],
                   position: currentIndex,
                 )
               : Container(),
+          SizedBox(height: 10,),
           widget.homedata['tab']['active']
               ? GridView.builder(
                   physics: NeverScrollableScrollPhysics(),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 3,
-                      crossAxisSpacing: 20,
-                      mainAxisSpacing: 20,
-                      mainAxisExtent: 150),
-                  padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
+                      crossAxisSpacing: 25,
+                      mainAxisSpacing: 25,
+                      mainAxisExtent: 130),
+                  padding: EdgeInsets.fromLTRB(30, 10, 30, 20),
                   shrinkWrap: true,
                   itemCount: widget.homedata['tab']['tab_count'],
                   itemBuilder: (context, index) {
@@ -127,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                         decoration: BoxDecoration(
                             color:
                                 hexToColor(widget.homedata['tab']['tab_color']),
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(7),
                             border: Border.all(
                                 width: 1,
                                 color: hexToColor(widget.homedata['tab']
@@ -137,9 +143,9 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             children: [
                               ClipRRect(
-                                borderRadius: BorderRadius.circular(5),
+                                borderRadius: BorderRadius.circular(4),
                                 child: Container(
-                                    height: 90,
+                                    height: 70,
                                     child: ImageLoader(
                                       url: widget.homedata['tab']['tab_array']
                                           [index]['bgimage'],
@@ -151,11 +157,15 @@ class _HomePageState extends State<HomePage> {
                               Text(
                                 widget.homedata['tab']['tab_array'][index]
                                     ['title'],
-                                style: TextStyle(
-                                  color: hexToColor(
-                                      widget.homedata['tab']['title_color']),
-                                  fontSize: 14,
+                                style:Theme.of(context).textTheme.labelSmall?.copyWith(
+                                  color: hexToColor(widget.homedata['tab']['title_color']),
+                                  fontSize: 16,
                                 ),
+                                // style: TextStyle(
+                                //   color: hexToColor(
+                                //       widget.homedata['tab']['title_color']),
+                                //   fontSize: 14,
+                                // ),
                               ),
                             ],
                           ),
@@ -167,7 +177,7 @@ class _HomePageState extends State<HomePage> {
               : Container(),
           widget.homedata['options']['active']
               ? Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+                  padding: const EdgeInsets.fromLTRB(20, 5, 20, 20),
                   child: Container(
                     height: 92.0 *
                             ((widget.homedata['options']['options_count'] / 4)
@@ -176,7 +186,7 @@ class _HomePageState extends State<HomePage> {
                     decoration: BoxDecoration(
                         color:
                             hexToColor(widget.homedata['options']['bgcolor']),
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(0),
                         border: Border.all(
                             width: 1,
                             color: hexToColor(
@@ -224,10 +234,9 @@ class _HomePageState extends State<HomePage> {
                               Text(
                                 widget.homedata['options']['options_array']
                                     [index]['title'],
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: hexToColor(widget.homedata['options']
-                                      ['title_color']),
+                                style:Theme.of(context).textTheme.labelSmall?.copyWith(
+                                  color: hexToColor(widget.homedata['options']['title_color']),
+                                  fontSize: 13,
                                 ),
                               ),
                             ],

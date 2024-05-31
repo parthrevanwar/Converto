@@ -86,27 +86,27 @@
             "homescreen_options": {
               "carousel": {
                 "active": true,
-                "border_color": "#000000",
-                "dot_color": "#00066B",
-                "active_dot_color": "#232996",
+                "border_color": "#ADADAD",
+                "dot_color": "#D4C4F2",
+                "active_dot_color": "#8D4BFA",
                 "squaredot": false ,
                 "carousel_count": 4 ,
                 "carousel_array": [
                   {
                     "title": "hello",
-                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "bgimage": "assets/img.png",
                     "url": "https://wemofy.in/"
                   },{
                     "title": "hello",
-                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "bgimage": "assets/img.png",
                     "url": "https://wemofy.in/"
                   },{
                     "title": "hello",
-                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "bgimage": "assets/img.png",
                     "url": "https://wemofy.in/"
                   },{
                     "title": "hello",
-                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "bgimage": "assets/img.png",
                     "url": "https://wemofy.in/"
                   }
                 ]
@@ -114,33 +114,33 @@
               "tab": {
                 "active": true,
                 "tab_color": "#EDE8FA",
-                "tab_border_color": "#000000",
-                "title_color": "#000000",
+                "tab_border_color": "#ADADAD",
+                "title_color": "#8D4BFA",
                 "tab_count": 5,
                 "tab_array": [
                   {
-                    "title": "hello",
-                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "title": "Shop",
+                    "bgimage": "assets/purple.png",
                     "url": "https://wemofy.in/"
                   },
                   {
-                    "title": "hello",
-                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "title": "Shop",
+                    "bgimage": "assets/purple.png",
                     "url": "https://wemofy.in/"
                   },
                   {
-                    "title": "hello",
-                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "title": "Shop",
+                    "bgimage": "assets/purple.png",
                     "url": "https://wemofy.in/"
                   },
                   {
-                    "title": "hello",
-                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "title": "Shop",
+                    "bgimage": "assets/purple.png",
                     "url": "https://wemofy.in/"
                   },
                   {
-                    "title": "hello",
-                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "title": "Shop",
+                    "bgimage": "assets/purple.png",
                     "url": "https://wemofy.in/"
                   }
                 ]
@@ -148,30 +148,30 @@
               "options": {
                 "active": true,
                 "bgcolor": "#EDE8FA",
-                "border_color": "#000000",
-                "title_color": "#000000",
+                "border_color": "#ADADAD",
+                "title_color": "#8D4BFA",
                 "options_count": 5,
                 "options_array": [
                   {
-                    "title": "hello",
-                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "title": "Option 1",
+                    "bgimage": "assets/purple.png",
                     "url": "https://wemofy.in/"
                   },
                   {
-                    "title": "hello",
-                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "title": "Option 2",
+                    "bgimage": "assets/purple.png",
                     "url": "https://wemofy.in/"
                   },{
-                    "title": "hello",
-                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "title": "Option 3",
+                    "bgimage": "assets/purple.png",
                     "url": "https://wemofy.in/"
                   },{
-                    "title": "hello",
-                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "title": "Option 4",
+                    "bgimage": "assets/purple.png",
                     "url": "https://wemofy.in/"
                   },{
-                    "title": "hello",
-                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
+                    "title": "Option 5",
+                    "bgimage": "assets/purple.png",
                     "url": "https://wemofy.in/"
                   }
                 ]
