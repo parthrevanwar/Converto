@@ -106,7 +106,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   if (index == 0) {
                     return HomePage(
                       jsonData: widget.jsonData,
-                      homedata: widget.jsonData['config']['bottom_navigation']['options']['menu_options'][0]['homescreen_options'],
+                      homedata: widget.jsonData['config']['bottom_navigation']
+                          ['options']['menu_options'][0]['homescreen_options'],
                     );
                   } else {
                     return Nav1(
@@ -132,7 +133,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 if (index == 0) {
                   return HomePage(
                     jsonData: widget.jsonData,
-                    homedata: widget.jsonData['config']['bottom_navigation']['options']['menu_options'][0]['homescreen_options'],
+                    homedata: widget.jsonData['config']['bottom_navigation']
+                        ['options']['menu_options'][0]['homescreen_options'],
                   );
                 } else {
                   return Nav1(
@@ -186,8 +188,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 30,
                         )
                       : SvgPicture.asset(
-                          widget.navdata['options']['menu_options'][index]
-                              ['icon'],
+                          convertToAssetPath(widget.navdata['options']
+                              ['menu_options'][index]['icon']),
                           colorFilter: ColorFilter.mode(
                               hexToColor(widget.navdata['options']
                                   ['selected_item_color']),

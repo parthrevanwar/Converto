@@ -23,7 +23,9 @@ class _HomePageState extends State<HomePage> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          SizedBox(height: 15,),
+          const SizedBox(
+            height: 15,
+          ),
           widget.homedata['carousel']['active']
               ? CarouselSlider(
                   options: CarouselOptions(
@@ -77,7 +79,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ))
               : Container(),
-          SizedBox(height: 5,),
+          SizedBox(
+            height: 5,
+          ),
           widget.homedata['carousel']['active']
               ? DotsIndicator(
                   decorator: DotsDecorator(
@@ -102,7 +106,9 @@ class _HomePageState extends State<HomePage> {
                   position: currentIndex,
                 )
               : Container(),
-          SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           widget.homedata['tab']['active']
               ? GridView.builder(
                   physics: NeverScrollableScrollPhysics(),
@@ -157,10 +163,14 @@ class _HomePageState extends State<HomePage> {
                               Text(
                                 widget.homedata['tab']['tab_array'][index]
                                     ['title'],
-                                style:Theme.of(context).textTheme.labelSmall?.copyWith(
-                                  color: hexToColor(widget.homedata['tab']['title_color']),
-                                  fontSize: 16,
-                                ),
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .labelSmall
+                                    ?.copyWith(
+                                      color: hexToColor(widget.homedata['tab']
+                                          ['title_color']),
+                                      fontSize: 16,
+                                    ),
                                 // style: TextStyle(
                                 //   color: hexToColor(
                                 //       widget.homedata['tab']['title_color']),
@@ -234,10 +244,14 @@ class _HomePageState extends State<HomePage> {
                               Text(
                                 widget.homedata['options']['options_array']
                                     [index]['title'],
-                                style:Theme.of(context).textTheme.labelSmall?.copyWith(
-                                  color: hexToColor(widget.homedata['options']['title_color']),
-                                  fontSize: 13,
-                                ),
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .labelSmall
+                                    ?.copyWith(
+                                      color: hexToColor(widget
+                                          .homedata['options']['title_color']),
+                                      fontSize: 13,
+                                    ),
                               ),
                             ],
                           ),
