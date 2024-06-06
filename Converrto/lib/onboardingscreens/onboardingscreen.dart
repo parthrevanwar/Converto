@@ -85,7 +85,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     buttonname: "Skip",
                     color: widget.onboardingoptions['screen_options']['button_color'],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 4),
                     child: SmoothPageIndicator(
@@ -105,13 +105,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   CustomButton(
                     press: () {
                       _pageController.page !=
                               widget.onboardingoptions['screen_options']['screen_count'] - 1
                           ? _pageController.nextPage(
-                              duration: Duration(milliseconds: 500),
+                              duration: const Duration(milliseconds: 500),
                               curve: Curves.ease,
                             )
                           : Navigator.pushReplacement(
@@ -162,7 +162,7 @@ class OnboardContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Spacer(
+        const Spacer(
           flex: 10,
         ),
         Container(
@@ -191,7 +191,7 @@ class OnboardContent extends StatelessWidget {
             )),
           )
         ),
-        Spacer(
+        const Spacer(
           flex: 6,
         ),
         Text(
@@ -201,7 +201,7 @@ class OnboardContent extends StatelessWidget {
               ),
           textAlign: TextAlign.center,
         ),
-        Spacer(
+        const Spacer(
           flex: 2,
         ),
         Text(
@@ -211,7 +211,7 @@ class OnboardContent extends StatelessWidget {
               ),
           textAlign: TextAlign.center,
         ),
-        Spacer(
+        const Spacer(
           flex: 4,
         ),
       ],

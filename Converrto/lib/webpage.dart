@@ -6,7 +6,7 @@ import 'globalfunctions.dart';
 import 'icon.dart';
 
 class WebPage extends StatefulWidget {
-  WebPage(
+  const WebPage(
       {super.key,
       required this.jsonData,
       required this.url,
@@ -85,7 +85,7 @@ class _Hamburger1State extends State<WebPage> {
                   radius: 28,
                   url: widget.jsonData['config']['appbar']['options']['bgicon'],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 30,
                 ),
               ],
@@ -135,7 +135,7 @@ class _Hamburger1State extends State<WebPage> {
                         widget.jsonData['config']['extra_options']['options']
                             ['refreshbutton']
                     ? ClipRRect(
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(25),
                           bottomLeft: Radius.circular(25),
                         ),
@@ -157,11 +157,11 @@ class _Hamburger1State extends State<WebPage> {
                         ),
                       )
                     : Container(),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 ClipRRect(
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(25),
                     bottomLeft: Radius.circular(25),
                   ),

@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:converrto/globalfunctions.dart';
 import 'package:converrto/homepage.dart';
 import 'package:converrto/icon.dart';
-import 'package:converrto/bottomnavscreens/nav1.dart';
-import 'package:converrto/hamburgurscreens/hamburger1.dart';
+import 'package:converrto/nav1.dart';
+import 'package:converrto/hamburger1.dart';
 import 'package:double_back_to_close_app/double_back_to_close_app.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   radius: 28,
                   url: widget.jsonData['config']['appbar']['options']['bgicon'],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 30,
                 ),
               ],
@@ -265,7 +265,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Padding(
@@ -280,7 +280,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             MenuButton(
@@ -601,31 +601,29 @@ class MenuButton extends StatelessWidget {
             onTap: press,
             child: Padding(
               padding: const EdgeInsets.fromLTRB(10, 5, 30, 5),
-              child: Container(
-                child: Row(
-                  children: [
-                    Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: AppIcon(
-                          radius: 20,
-                          url: icon,
-                        )),
-                    Expanded(
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 16.0, horizontal: 8.0),
-                        child: Text(
-                          title,
-                          style: GoogleFonts.inter(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            color: hexToColor(text_color),
-                          ),
+              child: Row(
+                children: [
+                  Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: AppIcon(
+                        radius: 20,
+                        url: icon,
+                      )),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 16.0, horizontal: 8.0),
+                      child: Text(
+                        title,
+                        style: GoogleFonts.inter(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                          color: hexToColor(text_color),
                         ),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           );

@@ -94,11 +94,11 @@
                 "carousel_array": [
                   {
                     "title": "hello",
-                    "bgimage": "assets/img.png",
+                    "bgimage": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Codeforces_logo.svg",
                     "url": "https://wemofy.in/"
                   },{
                     "title": "hello",
-                    "bgimage": "assets/img.png",
+                    "bgimage": "https://codeforces.com/predownloaded/09/d5/09d515849719f4bf8642ee12bc840cab1f4c5d7d.png",
                     "url": "https://wemofy.in/"
                   },{
                     "title": "hello",
@@ -120,7 +120,7 @@
                 "tab_array": [
                   {
                     "title": "Shop",
-                    "bgimage": "assets/purple.png",
+                    "bgimage": "https://aroundsketch.github.io/Apple-App-Icons/App%20Icon/Apple/AppStore/@SVG.svg",
                     "url": "https://wemofy.in/"
                   },
                   {

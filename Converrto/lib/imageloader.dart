@@ -13,11 +13,9 @@ class ImageLoader extends StatelessWidget {
         ? (isNetworkUrl(url)
         ? SvgPicture.network(
       url,
-      fit: BoxFit.cover,
     )
         : SvgPicture.asset(
       url,
-      fit: BoxFit.cover,
     ))
         : (isNetworkUrl(url)
         ? Image.network(

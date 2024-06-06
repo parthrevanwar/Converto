@@ -67,19 +67,22 @@ class _HomePageState extends State<HomePage> {
                                   width: 1,
                                   color: hexToColor(widget.homedata['carousel']
                                       ['border_color'])),
-                              color: Colors.blue,
+                              color: Colors.transparent,
                             ),
                             width: MediaQuery.of(context).size.width,
-                            child: ImageLoader(
-                                url: widget.homedata['carousel']
-                                    ['carousel_array'][index]['bgimage']),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(7),
+                              child: ImageLoader(
+                                  url: widget.homedata['carousel']
+                                      ['carousel_array'][index]['bgimage']),
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ))
               : Container(),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           widget.homedata['carousel']['active']
@@ -106,16 +109,16 @@ class _HomePageState extends State<HomePage> {
                   position: currentIndex,
                 )
               : Container(),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           widget.homedata['tab']['active']
               ? GridView.builder(
                   physics: NeverScrollableScrollPhysics(),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3,
-                      crossAxisSpacing: 25,
-                      mainAxisSpacing: 25,
+                      crossAxisCount: MediaQuery.of(context).orientation == Orientation.portrait ? 3: 5,
+                      crossAxisSpacing: 15,
+                      mainAxisSpacing: 15,
                       mainAxisExtent: 130),
                   padding: EdgeInsets.fromLTRB(30, 10, 30, 20),
                   shrinkWrap: true,
@@ -157,19 +160,21 @@ class _HomePageState extends State<HomePage> {
                                           [index]['bgimage'],
                                     )),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Text(
                                 widget.homedata['tab']['tab_array'][index]
                                     ['title'],
+                                softWrap: true,
+                                overflow: TextOverflow.ellipsis,
                                 style: Theme.of(context)
                                     .textTheme
                                     .labelSmall
                                     ?.copyWith(
                                       color: hexToColor(widget.homedata['tab']
                                           ['title_color']),
-                                      fontSize: 16,
+                                      fontSize: 14,
                                     ),
                                 // style: TextStyle(
                                 //   color: hexToColor(
@@ -190,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.fromLTRB(20, 5, 20, 20),
                   child: Container(
                     height: 92.0 *
-                            ((widget.homedata['options']['options_count'] / 4)
+                            ((widget.homedata['options']['options_count'] /( MediaQuery.of(context).orientation == Orientation.portrait ? 4 : 6))
                                 .ceil()) +
                         20,
                     decoration: BoxDecoration(
@@ -204,7 +209,7 @@ class _HomePageState extends State<HomePage> {
                     child: GridView.builder(
                       physics: NeverScrollableScrollPhysics(),
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 4,
+                          crossAxisCount: MediaQuery.of(context).orientation == Orientation.portrait ? 4 : 6,
                           crossAxisSpacing: 5,
                           mainAxisSpacing: 5,
                           mainAxisExtent: 90),
@@ -238,12 +243,13 @@ class _HomePageState extends State<HomePage> {
                                           ['options_array'][index]['bgimage'],
                                     ),
                                   )),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Text(
                                 widget.homedata['options']['options_array']
                                     [index]['title'],
+                                overflow: TextOverflow.ellipsis,
                                 style: Theme.of(context)
                                     .textTheme
                                     .labelSmall
